@@ -11,8 +11,8 @@ function navigateTo(path, setPathname) {
 
 function App() {
   const [pathname, setPathname] = useState(window.location.pathname)
-  const [username, setUsername] = useState('admin')
-  const [password, setPassword] = useState('admin123')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [token, setToken] = useState(sessionStorage.getItem(TOKEN_STORAGE_KEY))
