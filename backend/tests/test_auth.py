@@ -55,3 +55,13 @@ def test_refresh_token_wrong_type():
 
     response = client.post("/token/refresh", json={"refresh_token": access_token})
     assert response.status_code == 401
+
+
+def test_login_cors_allowed_origin():
+    response = client.post(
+        "/token",
+        json={"username": "admin", "password": "admin123"},
+        headers={"Origin": "http://localhost:5173"},
+    )
+    assert response.status_code == 200
+    assert response.headers["access-control-allow-origin"] == "http://localhost:5173"
