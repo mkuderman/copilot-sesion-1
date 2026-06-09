@@ -6,6 +6,14 @@
   padding: 24px;
 }
 
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 48px 24px;
+}
+
 .card {
   width: min(420px, 100%);
   background: #ffffff;
@@ -18,6 +26,10 @@
     rgba(0, 0, 0, 0.06) 0px 3px 3px -1.5px,
     rgba(0, 0, 0, 0.06) 0px 6px 6px -3px,
     rgba(0, 0, 0, 0.06) 0px 12px 12px -6px;
+}
+
+.welcome-card {
+  width: min(420px, 100%);
 }
 
 h1 {
@@ -74,4 +86,115 @@ input {
   margin: 4px 0 0;
   color: #b91c1c;
   font-weight: 500;
+}
+
+/* Certifications section */
+.certifications-section {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.certifications-title {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.certifications-subtitle {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow:
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.06) 0px 1px 1px -0.5px,
+    rgba(0, 0, 0, 0.06) 0px 3px 3px -1.5px,
+    rgba(0, 0, 0, 0.06) 0px 6px 6px -3px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cert-card:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.08) 0px 4px 8px -2px,
+    rgba(0, 0, 0, 0.06) 0px 12px 24px -6px;
+  transform: translateY(-2px);
+}
+
+.cert-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cert-badge--Principiante {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.cert-badge--Intermedio {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.cert-badge--Experto {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.cert-card-title {
+  margin: 0;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cert-card-desc {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.cert-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.cert-role {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.cert-code {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0078d4;
+  font-family: monospace;
 }
