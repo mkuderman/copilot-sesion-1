@@ -58,7 +58,7 @@ const MS_CERTIFICATIONS = [
     badge: '🧠',
   },
   {
-    id: 'm365-coll',
+    id: 'ms-721',
     level: 'Associate',
     levelColor: '#0078d4',
     title: 'M365 Collaboration Communications Systems Engineer',
