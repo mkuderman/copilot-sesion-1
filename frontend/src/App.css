@@ -6,6 +6,21 @@
   padding: 24px;
 }
 
+.welcome-page {
+  display: block;
+  padding: 32px 24px;
+}
+
+.welcome-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-header {
+  width: min(420px, 100%);
+  margin-bottom: 48px;
+}
+
 .card {
   width: min(420px, 100%);
   background: #ffffff;
@@ -74,4 +89,107 @@ input {
   margin: 4px 0 0;
   color: #b91c1c;
   font-weight: 500;
+}
+
+.certifications-section {
+  margin-top: 16px;
+}
+
+.certifications-title {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.certifications-subtitle {
+  margin: 0 0 24px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22.75px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow:
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.06) 0px 1px 1px -0.5px,
+    rgba(0, 0, 0, 0.06) 0px 3px 3px -1.5px,
+    rgba(0, 0, 0, 0.06) 0px 6px 6px -3px,
+    rgba(0, 0, 0, 0.06) 0px 12px 12px -6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.08) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.08) 0px 6px 12px -3px,
+    rgba(0, 0, 0, 0.08) 0px 12px 24px -6px;
+}
+
+.cert-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cert-badge {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.cert-level {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.cert-title {
+  margin: 0 0 4px;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cert-exam {
+  margin: 0 0 10px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cert-description {
+  margin: 0 0 16px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  flex: 1;
+}
+
+.cert-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0078d4;
 }
