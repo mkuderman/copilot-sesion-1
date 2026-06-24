@@ -3,6 +3,36 @@ import './App.css'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000'
 const TOKEN_STORAGE_KEY = 'accessToken'
+const MICROSOFT_CERTIFICATIONS_2026 = [
+  {
+    title: 'Azure Administrator Associate',
+    role: 'Administrador',
+    exam: 'AZ-104',
+    lastUpdated: '04/17/2026',
+    source: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/',
+  },
+  {
+    title: 'Azure Solutions Architect Expert',
+    role: 'Arquitecto de soluciones',
+    exam: 'AZ-305',
+    lastUpdated: '04/17/2026',
+    source: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/',
+  },
+  {
+    title: 'Cybersecurity Architect Expert',
+    role: 'Arquitecto de ciberseguridad',
+    exam: 'SC-100',
+    lastUpdated: '04/17/2026',
+    source: 'https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/',
+  },
+  {
+    title: 'Azure Developer Associate',
+    role: 'Desarrollador',
+    exam: 'AZ-204',
+    lastUpdated: '01/14/2026',
+    source: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/',
+  },
+]
 
 function navigateTo(path, setPathname) {
   window.history.pushState({}, '', path)
@@ -65,9 +95,25 @@ function App() {
   if (pathname === '/welcome' && token) {
     return (
       <main className="page">
-        <section className="card">
+        <section className="card welcome-card">
           <h1>Bienvenido</h1>
           <p>Iniciaste sesión correctamente.</p>
+          <section className="certifications-section" aria-label="Certificaciones Microsoft vigentes en 2026">
+            <h2>Certificaciones de Microsoft (2026)</h2>
+            <div className="certifications-grid">
+              {MICROSOFT_CERTIFICATIONS_2026.map((certification) => (
+                <article className="certification-card" key={certification.exam}>
+                  <h3>{certification.title}</h3>
+                  <p>Rol: {certification.role}</p>
+                  <p>Examen: {certification.exam}</p>
+                  <p>Actualizado: {certification.lastUpdated}</p>
+                  <a href={certification.source} target="_blank" rel="noreferrer">
+                    Ver certificación oficial
+                  </a>
+                </article>
+              ))}
+            </div>
+          </section>
           <button type="button" className="primary-button" onClick={handleLogout}>
             Cerrar sesión
           </button>
