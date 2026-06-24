@@ -7,6 +7,7 @@ Aplicación web en React para autenticación contra el backend FastAPI.
 - Pantalla de **login** que consume `POST /token`.
 - Guarda el `access_token` en `sessionStorage`.
 - Pantalla de **bienvenida** protegida (`/welcome`).
+- En la pantalla de bienvenida se muestran **cards** con certificaciones de Microsoft vigentes en 2026.
 - Si no hay sesión activa, no permite entrar a `/welcome`.
 - Estilos alineados con `DESIGN.md` (paleta, tipografía y radios principales).
 

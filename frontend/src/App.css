@@ -20,6 +20,50 @@
     rgba(0, 0, 0, 0.06) 0px 12px 12px -6px;
 }
 
+.welcome-card {
+  width: min(760px, 100%);
+}
+
+.certifications-section {
+  margin: 8px 0 16px;
+}
+
+.certifications-section h2 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.certifications-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.certification-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 12px;
+  background: #f9fafb;
+}
+
+.certification-card h3 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.certification-card p {
+  margin: 0 0 4px;
+}
+
+.certification-card a {
+  color: #111827;
+  font-size: 13px;
+  font-weight: 500;
+}
+
 h1 {
   margin: 0 0 8px;
   color: #111827;
@@ -75,4 +119,3 @@ input {
   color: #b91c1c;
   font-weight: 500;
 }
-
